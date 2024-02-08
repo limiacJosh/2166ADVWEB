@@ -1,0 +1,66 @@
+<body>
+<div class="row-container">
+  <div class="column">
+    <h3>Date Pipe</h3>
+    <p>Today's date: {{presentDate}}</p>
+    <p>Short date: {{presentDate | date: 'shortDate'}}</p>
+    <p>Medium Date: {{presentDate | date: 'mediumDate'}}</p>
+    <p>Long Date: {{presentDate | date: 'longDate'}}</p>
+  </div>
+
+  <div class="column">
+    <h3>Text Format Pipes</h3>
+    <p>My name is: {{name | uppercase}}</p>
+    <p>BS in: {{course| lowercase}}</p>
+    <p>Section: {{section | uppercase}}</p>
+  </div>
+
+  <div class="column">
+    <h3>Currency Pipes</h3>
+    <p>{{price | currency: '' :true}}</p>
+    <p>{{price | currency: 'INR'}}</p>
+    <p>{{ price | currency: 'PHP' : 'symbol-narrow' : '4.2-2' }}</p>
+  </div>
+
+  <div class="column">
+    <h3>Slice Pipes</h3>
+    <p><b>Start index:</b> {{fruits | slice:2}}</p>
+    <p><b>Start and end index: </b>{{fruits | slice:1:4}}</p>
+    <p><b>Negative index:</b> {{fruits | slice:-2}}</p>
+    <p><b>Negative and start and end index: </b>{{fruits | slice:-4:-2}}</p>
+  </div>
+
+  <div class="column">
+    <h3>Decimal Pipes</h3>
+    <p>{{decimalNum1 | number}}</p>
+    <p>{{decimalNum2 | number}}</p>
+    <p>{{decimalNum3 | number}}</p>
+  </div>
+
+  <div class="column">
+    <h3>Percent Pipes</h3>
+    <p>{{a | percent}}</p>
+    <p>{{b | percent: '4.3-5'}}</p>
+    <p>{{c | percent}}</p>
+  </div>
+  
+</div>
+
+<div class="column1">
+  <h3>JSON Pipes</h3>
+  <p>Without JSON pipe:</p>
+  <pre>{{ object }}</pre>
+  <p>With JSON pipe:</p>
+  <pre>{{ object | json }}</pre>
+  <hr>
+  <p>Without JSON pipe:</p>
+  <pre>{{ data }}</pre>
+  <p>With JSON pipe:</p>
+  <pre>{{ data | json }}</pre>
+  <hr>
+  <p>Without JSON pipe:</p>
+  <pre>{{ haha }}</pre>
+  <p>With JSON pipe:</p>
+  <pre>{{ haha | json }}</pre>
+</div>
+</body>
